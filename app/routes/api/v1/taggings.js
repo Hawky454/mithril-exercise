@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const knex = require('../../../db/knex');
-
+console.log('this is taggings.js');
 router.get('/', (req, res, next) => {
   knex('taggings')
     .select('taggings.id', 'taggings.tag_id', 'taggings.post_id', 'tags.name as tag_name', 'posts.title as post_title')

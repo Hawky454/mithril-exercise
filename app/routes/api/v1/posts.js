@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const knex = require('../../../db/knex');
+console.log('This is posts.js');
 
 router.get('/', (req, res, next) => {
   knex('posts').select().then( posts => {
